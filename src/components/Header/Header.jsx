@@ -2,21 +2,19 @@ import React from 'react'
 import { BsLinkedin , BsSearch} from "react-icons/bs";
 
 
-import './Header.css'
 
 const Header = () => {
   return (
-    <div className='header'>
-      <h1>Header</h1>
-    <div className="header__left">
-      <BsLinkedin />
-      <div className='header__search'>
-        <BsSearch />
-        <input type="text" />
+    <div className='flex sticky top-0 left-0'>
+    <div className="flex max-w-20">
+      <BsLinkedin className='w-8 h-8 cursor-pointer text-blue-700' />
+      <div className='flex mt-2 ml-4'>
+        <BsSearch className='' />
+        <input className=' bg-[#eef3f8] ml-4 outline-none' type="text" />
       </div>
       
     </div>
-    <div className="header__right"></div>
+    <div className=""></div>
     </div>
   )
 }
