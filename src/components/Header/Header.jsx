@@ -1,5 +1,9 @@
 import React from 'react'
 import { BsLinkedin , BsSearch} from "react-icons/bs";
+import { AiFillHome } from "react-icons/ai";
+import { MdOutlineAccountBalance } from "react-icons/md";
+import HeaderRight from './HeaderRight';
+
 
 
 
@@ -14,7 +18,10 @@ const Header = () => {
       </div>
       
     </div>
-    <div className=""></div>
+    <div className="flex ml-4">
+<HeaderRight className='m-2'  title='Home' Icon={AiFillHome } />
+<HeaderRight title='Account' Icon={MdOutlineAccountBalance } />
+    </div>
     </div>
   )
 }
