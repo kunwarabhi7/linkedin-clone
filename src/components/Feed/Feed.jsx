@@ -22,7 +22,10 @@ const Feed = () => {
   <FeedInput title='Job' color='purple' Icon={IoBagRemoveSharp}/>
   <FeedInput title='Write article' color='orange' Icon={IoCalendarSharp}/>
         </div>
-        <Posts />
+        <div className='bg-white m-9 p-4  mb-[10px] border-r-[10px]'>
+
+        <Posts name="Abhishek Singh" description='This is sample post' message='your message goes here'/>
+        </div>
     </div>
   )
 }
