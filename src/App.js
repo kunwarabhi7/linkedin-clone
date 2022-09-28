@@ -4,11 +4,11 @@ import SideBar from './components/SideBar/SideBar';
 
 function App() {
   return (
-    <div className="app">
+    <div className="bg-[#f3f2ef] flex flex-col ">
      {/*Header */}
      <Header />
      {/*SideBar */}
-     <div>
+     <div className='flex flex-row m-8'>
       <SideBar />
      </div>
      {/*Feed */}
