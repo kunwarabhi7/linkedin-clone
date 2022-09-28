@@ -1,4 +1,5 @@
 
+import Feed from './components/Feed/Feed';
 import Header from './components/Header/Header';
 import SideBar from './components/SideBar/SideBar';
 
@@ -10,6 +11,7 @@ function App() {
      {/*SideBar */}
      <div className='flex flex-row m-8'>
       <SideBar />
+     <Feed />
      </div>
      {/*Feed */}
      {/*app body */}
