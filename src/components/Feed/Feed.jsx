@@ -5,6 +5,7 @@ import { RiVideoChatFill } from 'react-icons/ri'
 import { IoBagRemoveSharp } from 'react-icons/io5'
 import { IoCalendarSharp } from 'react-icons/io5'
 import FeedInput from './FeedInput'
+import Posts from '../Posts/Posts'
 
 const Feed = () => {
   return (
@@ -21,6 +22,7 @@ const Feed = () => {
   <FeedInput title='Job' color='purple' Icon={IoBagRemoveSharp}/>
   <FeedInput title='Write article' color='orange' Icon={IoCalendarSharp}/>
         </div>
+        <Posts />
     </div>
   )
 }

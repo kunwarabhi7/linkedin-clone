@@ -15,13 +15,13 @@ import HeaderRight from './HeaderRight';
 
 const Header = () => {
   return (
-    <div className='flex sticky top-4  left-10 border-b-2'>
+    <div className='flex sticky top-4  left-10 border-b-2 bg-white'>
 
     <div className="flex max-w-20">
       <BsLinkedin className='w-[50px] h-12 cursor-pointer mt-2 ml-14  text-blue-700' />
       <div className='flex  ml-4 mt-3 mb-1 bg-[#eef3f8]'>
         <BsSearch className='ml-2 mt-3' />
-        <input className=' bg-[#eef3f8] mt-2 h-6 max-w-[200px] ml-4 mr-20 outline-none' type="text"  placeholder='Search'/>
+        <input className=' bg-[#eef3f8] mt-2 h-6 max-w-[200px] ml-4 mr-20 outline-none hover:w-full' type="text"  placeholder='Search'/>
       </div>
       
     </div>
