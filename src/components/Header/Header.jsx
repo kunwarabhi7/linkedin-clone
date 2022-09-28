@@ -31,7 +31,7 @@ const Header = () => {
 <HeaderRight title='Jobs' Icon={IoBagRemoveSharp } />
 <HeaderRight title='Messaging' Icon={BsChatDotsFill } />
 <HeaderRight title='Notifications' Icon={MdNotifications } />
-<HeaderRight title='Me' Icon={FcBusinessman} />
+<HeaderRight title='Me'  Icon={FcBusinessman} />
 <div className='border-l-4 h-14 text-black'></div>
 <HeaderRight title='Work' Icon={GiHamburgerMenu} />
 <HeaderRight title='Post a job for free' Icon={RiShoppingBagFill} />

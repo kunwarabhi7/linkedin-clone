@@ -1,5 +1,6 @@
 
 import Header from './components/Header/Header';
+import SideBar from './components/SideBar/SideBar';
 
 function App() {
   return (
@@ -7,6 +8,9 @@ function App() {
      {/*Header */}
      <Header />
      {/*SideBar */}
+     <div>
+      <SideBar />
+     </div>
      {/*Feed */}
      {/*app body */}
      {/*Widgets */}
