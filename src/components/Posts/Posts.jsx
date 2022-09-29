@@ -4,10 +4,10 @@ import { AiOutlineLike } from 'react-icons/ai'
 import { FaRegCommentDots } from 'react-icons/fa'
 import { IoMdShareAlt } from 'react-icons/io'
 import { FiSend } from 'react-icons/fi'
-
 import FeedInput from '../Feed/FeedInput'
 
 const Posts = ({name , description , message , photoUrl}) => {
+
   return (
     <div className=''>
     <div className='flex mb-3'>
@@ -24,7 +24,7 @@ const Posts = ({name , description , message , photoUrl}) => {
         <p>{message}</p>
     </div>
     <div className='flex justify-evenly mt-2'>
-    <FeedInput Icon={AiOutlineLike} title='Like' color='gray'  />
+    <FeedInput Icon={AiOutlineLike } title='Like' color='gray'  />
     <FeedInput Icon={FaRegCommentDots} title='Comment' color='gray' />
     <FeedInput Icon={IoMdShareAlt} title='Share' color='gray' />
     <FeedInput Icon={FiSend} title='send' color='gray' />
