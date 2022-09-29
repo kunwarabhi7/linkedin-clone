@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { FcBusinessman } from 'react-icons/fc'
 import { BsImages } from 'react-icons/bs'
 import { RiVideoChatFill } from 'react-icons/ri'
@@ -10,8 +10,12 @@ import Posts from '../Posts/Posts'
 const Feed = () => {
   const [input , setInput] = useState('')
     const[posts , setPosts] = useState([])
+
+  
+
   const sendPostToServer = (e) => {
 e.preventDefault()
+
 }
   
   return (
@@ -30,8 +34,8 @@ e.preventDefault()
         </div>
         <div className='bg-white m-9 p-4  mb-[10px] border-r-[10px]'>
           {/*Posts Mapping  */}
-          {posts.map((post)=>(
-            <Posts />
+          {posts.map(({id,data:{name,description,message,photoUrl}})=>(
+            <Posts key={id} name={name} description={description} message={message} photoUrl={photoUrl} />
           ))}
 
         <Posts name="Abhishek Singh" description='This is sample post' message='your message goes here your message goes here your message goes here your message goes here your message goes here your message goes here your message goes here your message goes here your message goes here your message goes here your message goes here your message goes here your message goes here '/>
