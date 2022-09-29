@@ -1,10 +1,10 @@
 import React from 'react'
-
+import Logo from '../../assests/Logo.png'
 const Login = () => {
   return (
-    <div>
-        <div>
-<img  src='https://www.citypng.com/public/uploads/preview/hd-linkedin-official-logo-transparent-background-31623962207jz85kqlqot.png' className='text-blue-400 w-200 h-120' alt='linkedin logo'/>
+    <div className='grid'>
+        <div className='w-40 ml-48 '>
+<img  src={Logo} alt='linkedin logo'/>
 
         </div>
         <div><h1>Make the most of your professional life</h1></div>
