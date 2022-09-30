@@ -1,21 +1,16 @@
-import { Route,Routes } from 'react-router-dom';
 import { useSelector} from 'react-redux';
 import { selectUser } from '../features/userSlice';
 import Feed from '../components/Feed/Feed';
 import Header from '../components/Header/Header';
 import SideBar from '../components/SideBar/SideBar';
-import SignUp from './SignUp';
 import SignIn from './SignIn';
+import SignUp from './SignUp';
+
 
 
 const Home = () => {
 
-  <Routes>
-    
-    <Route path="/signup" element={<SignUp />} />
-
-  </Routes>
-
+  
   const user = useSelector(selectUser);
     const sideBar = useSelector(state => state.sideBar);
   return (
