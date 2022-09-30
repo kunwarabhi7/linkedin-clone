@@ -6,7 +6,7 @@ import { IoBagRemoveSharp } from 'react-icons/io5'
 import { IoCalendarSharp } from 'react-icons/io5'
 import FeedInput from './FeedInput'
 import Posts from '../Posts/Posts'
-import { getDocs ,addDoc, doc } from 'firebase/firestore'
+import { getDocs ,addDoc } from 'firebase/firestore'
 import { colRef } from '../../utils/firebase/firebase'
 
 const Feed = () => {
@@ -63,3 +63,6 @@ setInput('')
 }
 
 export default Feed
+
+
+

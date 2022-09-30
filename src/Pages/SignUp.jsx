@@ -1,20 +1,22 @@
-import React,{useState} from 'react'
-import {Link} from "react-router-dom"
-import {createUserWithEmailAndPassword} from 'firebase/auth'
-import { auth } from '../utils/firebase/firebase'
+import React,{  useState} from 'react'
+import {Link, useNavigate} from "react-router-dom"
+import {UserAuth} from "../contex/AuthContex"
 import Logo from '../assests/Logo.png'
-import SignIn from './SignIn'
+
 
 const SignUp = () => {
+  const { createUser } = UserAuth();
 const [registerUserEmail, setregisterUserEmail] = useState('')
 const [registerUserPassword, setregisterUserPassword] = useState('')
+const navigate = useNavigate()
 
 const signUpButton = async(e) => {
   e.preventDefault()
   try{
 
-    const user = await createUserWithEmailAndPassword(auth,registerUserEmail, registerUserPassword)
+  const user =  await createUser(registerUserEmail, registerUserPassword);
     console.log(user)
+    navigate('/feed')
   } catch(error){
     console.log(error.message)
   }
@@ -38,7 +40,7 @@ const signUpButton = async(e) => {
 <p className='mt-4 text-gray-500'>By clicking Agree & Join, you agree to the LinkedIn <span className='text-blue-400 cursor-pointer'> User Agreement, Privacy Policy</span>, and <span className='text-blue-400 cursor-pointer'>Cookie Policy</span>.</p>
 <button type='submit' onClick={signUpButton} className='bg-blue-600 text-white font-bold rounded-full h-24 mt-6 hover:bg-blue-900'>Agree & Join</button>
     <p className='mt-4'>Already on LinkedIn? 
-    <Link to='signin' ><span className='text-blue-700 cursor-pointer'>Sign in</span></Link> 
+    <Link to='/' ><span className='text-blue-700 cursor-pointer'>Sign in</span></Link> 
     </p>
     </form>
     </div>

@@ -5,15 +5,24 @@ import { HiUsers } from "react-icons/hi";
 import { IoBagRemoveSharp } from "react-icons/io5";
 import { MdNotifications } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { RiShoppingBagFill } from "react-icons/ri";
+import { FaSignOutAlt } from "react-icons/fa";
 import { FcBusinessman } from "react-icons/fc";
+import { UserAuth } from '../../contex/AuthContex';
 
 import HeaderRight from './HeaderRight';
+import { auth } from '../../utils/firebase/firebase';
 
 
 
 
 const Header = () => {
+  const {logout} = UserAuth()
+
+  const signOutUser = async() =>{
+await logout(auth)
+console.log('User Is SignOut')
+  }
+
   return (
     <div className='flex sticky top-4  left-10 border-b-2 bg-white'>
 
@@ -32,9 +41,11 @@ const Header = () => {
 <HeaderRight title='Messaging' Icon={BsChatDotsFill } />
 <HeaderRight title='Notifications' Icon={MdNotifications } />
 <HeaderRight title='Me'  Icon={FcBusinessman} />
-<div className='border-l-4 h-14 text-black'></div>
 <HeaderRight title='Work' Icon={GiHamburgerMenu} />
-<HeaderRight title='Post a job for free' Icon={RiShoppingBagFill} />
+<button onClick={signOutUser}>
+  
+<HeaderRight title='SignOut' Icon={FaSignOutAlt} />
+</button>
 
     </div>
     </div>
