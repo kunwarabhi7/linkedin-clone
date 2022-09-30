@@ -10,7 +10,8 @@ const [userEmail, setUserEmail] = useState('')
 const [userPassword, setUserPassword] = useState('')
 const {signIn}= UserAuth()
 const navigate = useNavigate()
-    const signInButton = async() => {
+    const signInButton = async(e) => {
+        e.preventDefault()
         try{
             await signIn(userEmail, userPassword)
             console.log('sign in')
@@ -36,7 +37,7 @@ const navigate = useNavigate()
         <input onChange={e=>setUserEmail(e.target.value)} placeholder='Email or Phone'  type="text" className=' p-2 m-8 border border-black mb-1 ' required  />
        
         <input onChange={e=>setUserPassword(e.target.value)} type="password" placeholder='Password' className=' border p-2 m-8 border-black mb-2' required/>
-<button type='submit' onClick={signInButton} className='bg-blue-600 text-white font-bold rounded-full w-96 h-16 ml-6 mt-6 hover:bg-blue-900'>Sign in</button>
+<button type='submit'  className='bg-blue-600 text-white font-bold rounded-full w-96 h-16 ml-6 mt-6 hover:bg-blue-900'>Sign in</button>
     </form>
     <p className='mt-4 ml-24 mb-48 text-center text-2xl'>New to LinkedIn? 
     <Link to='/signup' ><span className='text-blue-700 cursor-pointer'>
